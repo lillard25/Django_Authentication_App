@@ -1,0 +1,15 @@
+{% extends "app/base.html" %}
+{% block title %}Dashboard{% endblock %}
+{% block content %}
+<div class="d-flex justify-content-center align-items-center vh-100">
+    <div class="p-5 rounded shadow" style="background-color: #ffe4e1; width: 600px;">
+        <h2 class="text-center mb-3" style="font-size: 1.8rem;">Hi {{ username }}!</h2>
+        <p class="text-center mb-3" style="font-size: 1rem;">Welcome to the dashbord. Try any of the given features!</p>
+        <div class="mt-4">
+            <a href="{% url 'profile' %}" class="btn btn-light w-100 mb-3" style="font-size: 1rem; padding: 10px;">Profile</a>
+            <a href="{% url 'change_password' %}" class="btn btn-light w-100 mb-3" style="font-size: 1rem; padding: 10px;">Change Password</a>
+            <a href="{% url 'logout' %}" class="btn btn-dark w-100" style="font-size: 1rem; padding: 10px;">Log Out</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

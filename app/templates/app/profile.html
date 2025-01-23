@@ -1,0 +1,17 @@
+{% extends "app/base.html" %}
+{% block title %}Profile{% endblock %}
+{% block content %}
+<div class="d-flex justify-content-center align-items-center vh-100">
+    <div class="p-5 rounded shadow" style="background-color: #ffe4e1;">
+        <h2 class="text-center mb-4" style="font-size: 1.8rem;">Profile</h2>
+        <p><strong>Username:</strong> {{ user.username }}</p>
+        <p><strong>Email:</strong> {{ user.email }}</p>
+        <p><strong>Date Joined:</strong> {{ user.date_joined }}</p>
+        <p><strong>Last Updated:</strong> {{ user.last_login }}</p>
+        <div class="mt-4">
+            <a href="{% url 'dashboard' %}" class="btn btn-light w-100 mb-3" style="font-size: 1rem; padding: 10px;">Back to Dashboard</a>
+            <a href="{% url 'logout' %}" class="btn btn-dark w-100" style="font-size: 1rem; padding: 10px;">Logout</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
